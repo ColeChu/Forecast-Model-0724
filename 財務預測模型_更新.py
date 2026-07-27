@@ -255,7 +255,7 @@ with tabs[7]:
     capex_dep_36 = np.zeros(36)
     for idx, row_c in edited_capex.iterrows():
         total_inv = row_c["投資總金額 (NTD)"]
-        m_start = row_c["預命發生月份"] if "預計發生月份" in row_c else row_c.iloc[3]
+        m_start = row_c["預計發生月份"] if "預計發生月份" in row_c else row_c.iloc[3]
         years = row_c["耐用年限 (年)"]
         if pd.notnull(total_inv) and years > 0 and m_start in months_36:
             start_idx = months_36.index(m_start)
